@@ -257,3 +257,15 @@ nav { align-items: center; }
   box-shadow: var(--shadow);
 }
 .contact-chip i { color: var(--coral); }
+
+.card a.dl {
+  border: 1.5px solid var(--coral);
+  padding: 6px 14px;
+  border-radius: 14px;
+  display: inline-flex;
+}
+.card a.dl:hover {
+  background: var(--coral);
+  color: #fff;
+  text-decoration: none;
+}
