@@ -217,7 +217,6 @@ nav a.pill:hover:not(.active) { background: var(--pink); }
 .dropdown-panel a i { color: var(--coral); font-size: 17px; }
 .dropdown > button.pill.open i.chevron { transform: rotate(180deg); }
 .dropdown > button.pill i.chevron { transition: transform 0.2s ease; font-size: 15px; }
-.dropdown > button.pill.open i.chevron { transform: rotate(180deg); }
 
 nav { align-items: center; }
 
