@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Démo — Catalogue d'anime — Athéna D.</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<style>
+  .anime-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px;
+    margin-top: 24px;
+  }
+  .anime-card {
+    background: var(--card); border-radius: 14px; overflow: hidden;
+    box-shadow: var(--shadow); border: 1px solid #fbe4ee;
+    transition: transform 0.2s ease;
+  }
+  .anime-card:hover { transform: translateY(-4px); }
+  .anime-card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+  .anime-title {
+    font-size: 12.5px; font-weight: 700; padding: 8px 10px; color: var(--ink);
+    text-align: center;
+  }
+  .demo-flag {
+    background: var(--pink); color: var(--pink-text); display: inline-flex; align-items: center;
+    gap: 6px; padding: 5px 12px; border-radius: 14px; font-size: 12.5px; font-weight: 700; margin-bottom: 20px;
+  }
+  .disclaimer {
+    margin-top: 40px; text-align: center; font-size: 11.5px; color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<div class="topbar">
+  <div class="brand">Athéna D. <span class="dot">.</span></div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="ateliers.html">Ateliers</a>
+    <a href="projets.html" class="active">Projets</a>
+  </nav>
+</div>
+
+<section class="section">
+  <span class="demo-flag"><i class="ti ti-photo"></i>Démo statique — aperçu de l'interface</span>
+  <h2><i class="ti ti-photo" style="color:var(--pink-deep)"></i>Catalogue d'anime — galerie</h2>
+  <p class="sub">Aperçu visuel de la galerie du projet (voir <a href="projets.html">la fiche projet</a> pour le détail technique et le code source). Cette page est une reconstitution statique de l'interface, sans base de données.</p>
+
+  <div class="anime-grid">
+    <div class="anime-card">
+      <img src="images/anime-demo/9.jpg" alt="Jujutsu Kaisen" loading="lazy">
+      <div class="anime-title">Jujutsu Kaisen</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/10.jpg" alt="Mushoku Tensei" loading="lazy">
+      <div class="anime-title">Mushoku Tensei</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/11.jpg" alt="Dr Stone" loading="lazy">
+      <div class="anime-title">Dr Stone</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/12.jpg" alt="One Piece" loading="lazy">
+      <div class="anime-title">One Piece</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/13.jpg" alt="Baki" loading="lazy">
+      <div class="anime-title">Baki</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/14.jpg" alt="Tsubasa Chronicle" loading="lazy">
+      <div class="anime-title">Tsubasa Chronicle</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/15.jpg" alt="Détective Conan" loading="lazy">
+      <div class="anime-title">Détective Conan</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/16.jpg" alt="Naruto" loading="lazy">
+      <div class="anime-title">Naruto</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/17.jpg" alt="Violet Evergarden" loading="lazy">
+      <div class="anime-title">Violet Evergarden</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/18.jpg" alt="Death Note" loading="lazy">
+      <div class="anime-title">Death Note</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/19.jpg" alt="Les Carnets de l'Apothicaire" loading="lazy">
+      <div class="anime-title">Les Carnets de l'Apothicaire</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/20.jpg" alt="86 Eighty-Six" loading="lazy">
+      <div class="anime-title">86 Eighty-Six</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/21.jpg" alt="Kingdom" loading="lazy">
+      <div class="anime-title">Kingdom</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/22.jpg" alt="Demon Slayer" loading="lazy">
+      <div class="anime-title">Demon Slayer</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/23.jpg" alt="Shadow" loading="lazy">
+      <div class="anime-title">Shadow</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/24.jpg" alt="Elite" loading="lazy">
+      <div class="anime-title">Elite</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/25.jpg" alt="7th Time Loop" loading="lazy">
+      <div class="anime-title">7th Time Loop</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/26.jpg" alt="Food Wars" loading="lazy">
+      <div class="anime-title">Food Wars</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/28.jpg" alt="Titre non renseigné" loading="lazy">
+      <div class="anime-title">Titre non renseigné</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/35.jpg" alt="Titre non renseigné" loading="lazy">
+      <div class="anime-title">Titre non renseigné</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/36.jpg" alt="Titre non renseigné" loading="lazy">
+      <div class="anime-title">Titre non renseigné</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/37.jpg" alt="Titre non renseigné" loading="lazy">
+      <div class="anime-title">Titre non renseigné</div>
+    </div>
+    <div class="anime-card">
+      <img src="images/anime-demo/38.jpg" alt="Titre non renseigné" loading="lazy">
+      <div class="anime-title">Titre non renseigné</div>
+    </div>
+  </div>
+
+  <p class="disclaimer">Visuels utilisés à titre illustratif dans le cadre d'un projet étudiant — les œuvres et images appartiennent à leurs ayants droit respectifs.</p>
+</section>
+
+<div class="footer">Portfolio réalisé avec ✧ — Athéna D., 2026</div>
+
+<script src="assets/network-bg.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

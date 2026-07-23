@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets — Athéna D.</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<div class="topbar">
+  <div class="brand">Athéna D. <span class="dot">.</span></div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="ateliers.html">Ateliers</a>
+    <a href="projets.html" class="active">Projets</a>
+  </nav>
+</div>
+
+<section class="section reveal">
+  <h2><i class="ti ti-photo" style="color:var(--pink-deep)"></i>Projets</h2>
+  <p class="sub">Des projets plus complets qui combinent plusieurs compétences à la fois.</p>
+
+  <div class="project-hero">
+    <h2>Catalogue d'images — gestion sans stockage en base</h2>
+    <p>Petite application web développée en environnement local (UwAmp), sous la forme d'un catalogue d'anime. L'objectif technique : afficher des images dans une galerie sans les stocker directement dans la base de données — seuls le nom et le chemin du fichier y sont enregistrés, les fichiers eux-mêmes restant sur le serveur.</p>
+    <div class="stack-row">
+      <span class="stack-chip">PHP</span>
+      <span class="stack-chip">MySQL / PDO</span>
+      <span class="stack-chip">Apache (UwAmp)</span>
+      <span class="stack-chip">Sessions &amp; authentification</span>
+    </div>
+  </div>
+
+  <h3>Fonctionnalités mises en place</h3>
+  <ul class="feature-list">
+    <li><i class="ti ti-upload"></i>Upload d'images avec vérification du type de fichier (jpeg, png, gif)</li>
+    <li><i class="ti ti-database"></i>Enregistrement du chemin en base, pas de stockage binaire</li>
+    <li><i class="ti ti-lock"></i>Authentification (inscription, connexion, déconnexion) avec espace admin protégé par session</li>
+    <li><i class="ti ti-edit"></i>CRUD complet sur les fiches (création, lecture, modification, suppression)</li>
+    <li><i class="ti ti-search"></i>Barre de recherche par titre</li>
+    <li><i class="ti ti-layout-grid"></i>Pagination de la galerie (6 images par page)</li>
+  </ul>
+
+  <h3 style="margin-top:32px;">Extrait de code — traitement de l'upload</h3>
+  <pre><code>if (in_array($fileType, $allowedTypes)) {
+    $uploadDir = 'uploads/';
+    $filePath = $uploadDir . $fileName;
+    move_uploaded_file($fileTmpName, $filePath);
+
+    // Seul le chemin est enregistré en base, pas l'image elle-même
+    $stmt = $pdo->prepare("INSERT INTO images (file_name, file_path) VALUES (?, ?)");
+    $stmt->execute([$fileName, $filePath]);
+}</code></pre>
+
+  <h3 style="margin-top:32px;">Aperçu</h3>
+  <p style="margin-bottom:14px;">Le site tourne en local (UwAmp), pas de version live avec base de données — voici une reconstitution statique de la galerie pour se faire une idée de l'interface :</p>
+  <p>
+    <a class="dl" href="demo-catalogue.html"><i class="ti ti-eye"></i>Voir la démo de la galerie</a>
+  </p>
+
+  <p style="margin-top:24px;">
+    <a class="dl" href="#" id="repo-link"><i class="ti ti-brand-github"></i>Voir le code source sur GitHub</a>
+  </p>
+
+</section>
+
+<div class="footer">Portfolio réalisé avec ✧ — Athéna D., 2026</div>
+
+<script src="assets/network-bg.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
