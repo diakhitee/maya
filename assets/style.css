@@ -184,19 +184,23 @@ pre {
 }
 .brand .full-name { font-size: 15px; color: var(--ink); font-weight: 700; }
 
-nav a.pill, .dropdown > button.pill {
+nav a.pill {
   background: transparent; border: none; outline: none; appearance: none;
   cursor: pointer; margin: 0;
   font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 15px; color: var(--ink);
   padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
   transition: background 0.2s ease, color 0.2s ease;
 }
-nav a.pill.active, .dropdown > button.pill.active {
-  background: var(--coral); color: #fff;
+.dropdown > button.pill {
+  background: var(--coral); color: #fff; border: none; outline: none; appearance: none;
+  cursor: pointer; margin: 0;
+  font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 15px;
+  padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
   box-shadow: 0 4px 14px rgba(229, 102, 90, 0.3);
+  transition: background 0.2s ease;
 }
+nav a.pill.active { background: var(--coral); color: #fff; box-shadow: 0 4px 14px rgba(229, 102, 90, 0.3); }
 nav a.pill:hover:not(.active) { background: var(--pink); }
-
 .dropdown { position: relative; }
 .dropdown-panel {
   position: absolute; top: 120%; right: 0; min-width: 220px;
