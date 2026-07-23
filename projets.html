@@ -11,11 +11,17 @@
 <canvas id="bg-canvas"></canvas>
 
 <div class="topbar">
-  <div class="brand">Athéna D. <span class="dot">.</span></div>
+  <div class="brand"><span class="logo-pill">AD</span><span class="full-name">Mariama Diakhite.</span></div>
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="ateliers.html">Ateliers</a>
-    <a href="projets.html" class="active">Projets</a>
+    <a href="index.html" class="pill">Accueil</a>
+    <div class="dropdown">
+      <button class="pill active" id="dossiers-btn"><i class="ti ti-folder"></i>Dossiers <i class="ti ti-chevron-down chevron"></i></button>
+      <div class="dropdown-panel" id="dossiers-panel">
+        <a href="ateliers.html"><i class="ti ti-tools"></i>Ateliers Pro</a>
+        <a href="projets.html"><i class="ti ti-briefcase"></i>Projets</a>
+        <a href="demo-catalogue.html"><i class="ti ti-photo"></i>Démo Catalogue</a>
+      </div>
+    </div>
   </nav>
 </div>
 
